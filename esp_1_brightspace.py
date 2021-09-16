@@ -41,7 +41,7 @@ def send_and_read(ser,data):
     time.sleep(wait_time)
     ser.write(data)
     time.sleep(wait_time)
-    read_from_port(ser);
+    read_from_port(ser)
     time.sleep(wait_time)
 
 # Open serial port
