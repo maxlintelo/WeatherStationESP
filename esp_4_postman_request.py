@@ -80,15 +80,10 @@ try:
     # 1. send length of request
     # 2. send actual message
     request = 'GET / HTTP/1.1' \
-    'User-Agent: PostmanRuntime/7.28.4' \
-    'Accept: */*' \
-    'Postman-Token: 1cd0b1f8-ce73-492d-93b9-aeecb23727a0' \
-    'Host: 81.207.176.52:8081' \
-    'Accept-Encoding: gzip, deflate, br' \
-    'Connection: keep-alive' \
     '\r\n\r\n'
     send_and_read(esp8266, ('AT+CIPSEND=' + str(len(request)) + '\r\n').encode())
-    send_and_read(esp8266, b'AT+CIPSEND\r\n')
+    time.sleep(1)
+    # send_and_read(esp8266, b'AT+CIPSEND\r\n')
     send_and_read(esp8266, (request).encode())
     time.sleep(1)
     read_from_port(esp8266)
