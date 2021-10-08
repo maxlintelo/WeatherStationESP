@@ -28,7 +28,6 @@ try:
     # send_and_read(esp8266, b'AT+CIPSEND\r\n')
     send_and_read(esp8266, (request).encode())
     time.sleep(1)
-    read_from_port(esp8266)
 
     # close connection
     send_and_read(esp8266, b'AT+CIPCLOSE\r\n')
