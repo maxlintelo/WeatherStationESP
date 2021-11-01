@@ -26,7 +26,7 @@ def main():
     print('Filling...')
     while(1):
         new_post()
-        time.sleep(5)
+        time.sleep(10)
         
 
 if __name__ == "__main__":
